@@ -9,7 +9,7 @@ import java.util.List;
 public class IntakeService {
 
     private List<IntakeEntry> intakeEntryList = new ArrayList<>();
-    private IntakeValidator validator;
+    private final IntakeValidator validator;
 
     public IntakeService(IntakeValidator validator) {
         this.validator = validator;
