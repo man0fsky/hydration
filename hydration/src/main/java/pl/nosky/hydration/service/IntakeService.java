@@ -10,10 +10,20 @@ public class IntakeService {
 
     private List<IntakeEntry> intakeEntryList = new ArrayList<>();
     private final IntakeValidator validator;
+    private final HydrationCalculator hydrationCalculator;
 
-    public IntakeService(IntakeValidator validator) {
+    public IntakeService(IntakeValidator validator,HydrationCalculator hydrationCalculator) {
         this.validator = validator;
         this.intakeEntryList = new ArrayList<>();
+        this.hydrationCalculator = hydrationCalculator;
+    }
+
+    public double calculateHydrationSum(){
+        double hydrationSum=0;
+        for (IntakeEntry el:intakeEntryList){
+            hydrationSum+=hydrationCalculator.calculateHydrationBalance(el);
+        }
+        return hydrationSum;
     }
 
     public void addEntry(IntakeEntry entry) {
