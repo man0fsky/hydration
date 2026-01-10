@@ -1,11 +1,12 @@
 package pl.nosky.hydration.service;
 
+import org.springframework.stereotype.Service;
 import pl.nosky.hydration.domain.IntakeEntry;
 import pl.nosky.hydration.validation.IntakeValidator;
 
 import java.util.ArrayList;
 import java.util.List;
-
+@Service
 public class IntakeService {
 
     private List<IntakeEntry> intakeEntryList = new ArrayList<>();

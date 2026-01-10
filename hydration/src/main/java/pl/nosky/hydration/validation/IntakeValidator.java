@@ -1,10 +1,11 @@
 package pl.nosky.hydration.validation;
 
 
+import org.springframework.stereotype.Component;
 import pl.nosky.hydration.domain.IntakeEntry;
 
 import java.time.LocalDateTime;
-
+@Component
 public class IntakeValidator {
 
     public void validate(IntakeEntry entry) {
