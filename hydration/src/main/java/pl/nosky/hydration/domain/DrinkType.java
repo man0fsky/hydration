@@ -5,8 +5,8 @@ public enum DrinkType {
     WATER(1.0),
     COFFEE(0.8),
     TEA(0.9),
-    ENERGY_DRINK(0.75),
-    BEER(0.6),
+    ENERGY_DRINK(0.7),
+    BEER(-0.1),
     LIQUOR(-0.2);
 
     private final double hydrationFactor;
